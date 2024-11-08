@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studend Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="py-3">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-4 d-flex align-items-center">
+                    <div class="toggle-icon" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                        <img height="50px" src="images/logo-icon.png" alt="">
+                    </div>
+                    
+                    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+                        <a href="#" class="nav-grid nav-header">
+                            <div class="grid-icon d-flex align-items-center justify-content-center h-100 p-2">
+                                <img class="w-100" src="images/logo-icon.png" alt="">
+                            </div>
+                            <div class="grid-content-logo d-flex align-items-center justify-content-between h-100 p-2">
+                                <img class="w-75" src="images/text-logo.png" alt="">
+
+                                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                            </div>
+                        </a>
+                        <a href="#" class="nav-grid active">
+                            <div class="grid-icon d-flex align-items-center justify-content-center h-100 p-3">
+                                <img class="h-100" src="images/dashboard.png" alt="">
+                            </div>
+                            <div class="grid-content d-flex align-items-center h-100 p-2">
+                                <span>Dashboard</span>
+                            </div>
+                        </a>
+                        <a href="#" class="nav-grid">
+                            <div class="grid-icon d-flex align-items-center justify-content-center h-100 p-3">
+                                <img class="h-100" src="images/all-course.png" alt="">
+                            </div>
+                            <div class="grid-content d-flex align-items-center h-100 p-2">
+                                <span>All Courses</span>
+                            </div>
+                        </a>
+                        <a href="#" class="nav-grid">
+                            <div class="grid-icon d-flex align-items-center justify-content-center h-100 p-3">
+                                <img class="h-100" src="images/group-chat.png" alt="">
+                            </div>
+                            <div class="grid-content d-flex align-items-center h-100 p-2">
+                                <span>Group Chat</span>
+                            </div>
+                        </a>
+                        <a href="#" class="nav-grid">
+                            <div class="grid-icon d-flex align-items-center justify-content-center h-100 p-3">
+                                <img class="h-100" src="images/calender.png" alt="">
+                            </div>
+                            <div class="grid-content d-flex align-items-center h-100 p-2">
+                                <span>Course Calendar</span>
+                            </div>
+                        </a>
+                        <a href="#" class="nav-grid">
+                            <div class="grid-icon d-flex align-items-center justify-content-center h-100 p-3">
+                                <img class="h-100" src="images/setting.png" alt="">
+                            </div>
+                            <div class="grid-content d-flex align-items-center h-100 p-2">
+                                <span>Setting</span>
+                            </div>
+                        </a>
+                    </div>                    
+                </div>
+                <div class="col-8">
+                    <ul class="list-unstyled mb-0 d-flex justify-content-end">
+                        <li>
+                            <p class="mb-0 fw-semibold text-gray">Status</p>
+                            <div class="bg-success d-flex align-items-center p-2 rounded-2">
+                                <img height="25" src="images/approve.png" alt="">
+                                <p class="mb-0 fw-semibold text-white ms-2">Approved</p>
+                            </div>
+                        </li>
+                        <li class="ms-4">
+                            <p class="mb-0 fw-semibold text-gray">Status</p>
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section>
+        <div class="container-fluid">
+            <div class="account-details d-flex rounded-4 overflow-hidden">
+                <div class="row d-flex flex-column-reverse flex-lg-row w-100 position-relative z-2 m-0">
+                    <div class="col-lg-7 d-flex flex-column h-100 justify-content-between p-4">
+                        <p class="date text-white mb-0 fw-light">October 22, 2024</p>
+                        <div>
+                            <h2 class="title-2 text-white">Welcome Back, Ivanov Ivan</h2>
+                            <h4 class="title-4 fst-italic fw-lighter text-white">Always stay updated in your Course.tours </h4>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 d-flex justify-content-center justify-content-lg-end p-4">
+                        <div class="profile position-relative">
+                            <img class="w-100" src="images/profile.png" alt="">
+                            <button class="profile-edit bg-white rounded-circle p-2 border-0 d-flex align-items-center justify-content-center"><i class="bi bi-pencil-square"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="banner-img bg-overly">
+                    <img class="w-100" src="images/banner.png" alt="">
+                </div>
+            </div>
+            <div class="row py-3">
+                <div class="col-3 col-lg-6 d-flex align-items-center">
+                    <span class="d-block text-gray">Dashboard</span>
+                </div>
+                <div class="col-9 col-lg-6 d-flex align-items-center justify-content-between">
+                    <div class="search position-relative">
+                        <input type="search" class="form-control rounded-pill ps-5 text-gray">
+                        <i class="bi bi-search text-gray"></i>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between gap-3">
+                        <div class="dropdown p-4">
+                            <a class="text-decoration-none d-inline-block" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              <img height="35px" src="images/notification-icon.png" alt="">
+                            </a>
+                          
+                            <ul class="dropdown-menu border-0 p-4">
+                                <li class="mb-3">
+                                    <p class="notifiation-date p-2 bg-white mb-0">03-10-2024</p>
+                                    <div class="d-flex align-items-center gap-2 my-2">
+                                        <div class="bar-circle bg-warning"></div>
+                                        <span class="notifiation-title bg-warning text-gray px-2 p-1 fw-semibold">Video Conference</span>
+                                    </div>
+                                    <div class="notifiaction-time">
+                                        <p class="mb-0 fw-semibold text-gray">At 2.00pm to 3.00pm</p>
+                                    </div>
+                                    <span class="fw-lighter">By Damir J.</span>
+                                    <a href="#" class="drop-link text-primary fst-italic mt-2 px-3 py-1 rounded-pill text-decoration-none d-block border text-gray fw-light">Click here for the Video Link</a>
+                                </li>
+                                <li class="mb-3">
+                                    <p class="notifiation-date p-2 bg-white mb-0">08-10-2024</p>
+                                    <div class="d-flex align-items-center gap-2 my-2">
+                                        <div class="bar-circle bg-danger"></div>
+                                        <span class="notifiation-title text-danger px-2 p-1 fw-semibold">Lecture Day</span>
+                                    </div>
+                                    <div class="notifiaction-time">
+                                        <p class="mb-0 fw-semibold text-gray">At 3.00pm to 4.00pm</p>
+                                    </div>
+                                    <span class="fw-lighter">By Damir J.</span>
+                                    <a href="#" class="drop-link text-primary fst-italic mt-2 px-3 py-1 rounded-pill text-decoration-none d-block border text-gray fw-light">Click here for the Video Link</a>
+                                </li>
+                                <li class="mb-3">
+                                    <p class="notifiation-date p-2 bg-white mb-0">08-10-2024</p>
+                                    <div class="d-flex align-items-center gap-2 my-2">
+                                        <div class="bar-circle bg-info"></div>
+                                        <span class="notifiation-title text-info px-2 p-1 fw-semibold">Online Streaming</span>
+                                    </div>
+                                    <div class="notifiaction-time">
+                                        <p class="mb-0 fw-semibold text-gray">At 11.00pm to 2.00pm</p>
+                                    </div>
+                                    <span class="fw-lighter">By Damir J.</span>
+                                    <a href="#" class="drop-link text-primary fst-italic mt-2 px-3 py-1 rounded-pill text-decoration-none d-block border text-gray fw-light">Click here for the Video Link</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <a class="text-decoration-none d-inline-block p-3 rounded-circle bg-gray-50" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img height="30px" src="images/logout.png" alt="">
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col-lg-6">
+                    <div>
+                        <p class="text-gray fw-normal fs-5 mb-2">Register Information</p>
+                        <div class="card text-center p-4 mb-3">
+                            <span class="d-block text-center mb-2 text-gray">Full Name</span>
+                            <h2 class="text-body-tertiary w-75 mx-auto p-2 bg-gray-50 text-center mb-2">Ivanov Ivan</h2>
+                            <div class="mx-auto mb-2">
+                                <p class="mb-0 fw-lighter fst-italic text-white ms-2 bg-success d-flex align-items-center p-2 py-1 rounded-2"><i class="bi bi-envelope me-2"></i> Email Verified</p>
+                            </div>
+                            <p class="mb-0 text-primary">Congratulations, you have successfully confirmed your account.</p>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <p class="text-primary fw-normal fs-5 mb-2">Live Streaming Video Recorded</p>
+                        <div class="card overflow-hidden pb-0">
+                            <div class="videos-table">
+                                <div class="table-grid table-header border-bottom">
+                                    <div class="id-list p-2 text-center border-end">
+                                        <p class="fw-lighter text-gray mb-0">ID</p>
+                                    </div>
+                                    <div class="video-contnet-list d-flex align-items-center justify-content-between p-2">
+                                        <p class="fw-lighter text-gray mb-0">TITLE</p>
+                                        <p class="fw-lighter text-gray mb-0">ALL VIDEO</p>
+                                    </div>
+                                </div>
+                                <div class="table-body">
+                                    <div class="table-grid">
+                                        <div class="id-list p-2 text-center border-end">
+                                            <p class="fw-semibold text-gray mb-0">157</p>
+                                        </div>
+                                        <div class="video-contnet-list d-flex align-items-center justify-content-between p-2">
+                                            <div>
+                                                <p class="fw-semibold text-gray mb-0">Yoga - Online Class</p>
+                                                <p class="fw-lighter text-gray mb-0">Rauf Ahmad</p>
+                                                <p class="fw-lighter text-gray mb-0"><span>26/09/2024  06:30pm(Asia/Dubai)</span></p>
+                                            </div>
+                                            
+                                            <div>
+                                                <p class="fw-lighter text-gray mb-0"><span>Video Size:0.93MB</span></p>
+                                                <div class="d-flex gap-2 flex-wrap">
+                                                    <a href="#" class="btn-purple text-decoration-none btn"><i class="bi bi-arrow-down-circle me-2"></i>Download</a>
+                                                    <a href="#" class="btn-green text-decoration-none btn"><i class="bi bi-play-btn me-2"></i></i>Play Video</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="table-grid">
+                                        <div class="id-list p-2 text-center border-end">
+                                            <p class="fw-semibold text-gray mb-0">157</p>
+                                        </div>
+                                        <div class="video-contnet-list d-flex align-items-center justify-content-between p-2">
+                                            <div>
+                                                <p class="fw-semibold text-gray mb-0">Yoga - Online Class</p>
+                                                <p class="fw-lighter text-gray mb-0">Rauf Ahmad</p>
+                                                <p class="fw-lighter text-gray mb-0"><span>26/09/2024  06:30pm(Asia/Dubai)</span></p>
+                                            </div>
+                                            
+                                            <div>
+                                                <p class="fw-lighter text-gray mb-0"><span>Video Size:0.93MB</span></p>
+                                                <div class="d-flex gap-2 flex-wrap">
+                                                    <a href="#" class="btn-purple text-decoration-none btn"><i class="bi bi-arrow-down-circle me-2"></i>Download</a>
+                                                    <a href="#" class="btn-green text-decoration-none btn"><i class="bi bi-play-btn me-2"></i></i>Play Video</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="table-grid">
+                                        <div class="id-list p-2 text-center border-end">
+                                            <p class="fw-semibold text-gray mb-0">157</p>
+                                        </div>
+                                        <div class="video-contnet-list d-flex align-items-center justify-content-between p-2">
+                                            <div>
+                                                <p class="fw-semibold text-gray mb-0">Yoga - Online Class</p>
+                                                <p class="fw-lighter text-gray mb-0">Rauf Ahmad</p>
+                                                <p class="fw-lighter text-gray mb-0"><span>26/09/2024  06:30pm(Asia/Dubai)</span></p>
+                                            </div>
+                                            
+                                            <div>
+                                                <p class="fw-lighter text-gray mb-0"><span>Video Size:0.93MB</span></p>
+                                                <div  class="d-flex gap-2 flex-wrap">
+                                                    <a href="#" class="btn-purple text-decoration-none btn"><i class="bi bi-arrow-down-circle me-2"></i>Download</a>
+                                                    <a href="#" class="btn-green text-decoration-none btn"><i class="bi bi-play-btn me-2"></i></i>Play Video</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="table-grid">
+                                        <div class="id-list p-2 text-center border-end">
+                                            <p class="fw-semibold text-gray mb-0">157</p>
+                                        </div>
+                                        <div class="video-contnet-list d-flex align-items-center justify-content-between p-2">
+                                            <div>
+                                                <p class="fw-semibold text-gray mb-0">Yoga - Online Class</p>
+                                                <p class="fw-lighter text-gray mb-0">Rauf Ahmad</p>
+                                                <p class="fw-lighter text-gray mb-0"><span>26/09/2024  06:30pm(Asia/Dubai)</span></p>
+                                            </div>
+                                            
+                                            <div>
+                                                <p class="fw-lighter text-gray mb-0"><span>Video Size:0.93MB</span></p>
+                                                <div  class="d-flex gap-2 flex-wrap">
+                                                    <a href="#" class="btn-purple text-decoration-none btn"><i class="bi bi-arrow-down-circle me-2"></i>Download</a>
+                                                    <a href="#" class="btn-green text-decoration-none btn"><i class="bi bi-play-btn me-2"></i></i>Play Video</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="table-grid">
+                                        <div class="id-list p-2 text-center border-end">
+                                            <p class="fw-semibold text-gray mb-0">157</p>
+                                        </div>
+                                        <div class="video-contnet-list d-flex align-items-center justify-content-between p-2">
+                                            <div>
+                                                <p class="fw-semibold text-gray mb-0">Yoga - Online Class</p>
+                                                <p class="fw-lighter text-gray mb-0">Rauf Ahmad</p>
+                                                <p class="fw-lighter text-gray mb-0"><span>26/09/2024  06:30pm(Asia/Dubai)</span></p>
+                                            </div>
+                                            
+                                            <div>
+                                                <p class="fw-lighter text-gray mb-0"><span>Video Size:0.93MB</span></p>
+                                                <div class="d-flex gap-2 flex-wrap">
+                                                    <a href="#" class="btn-purple text-decoration-none btn"><i class="bi bi-arrow-down-circle me-2"></i>Download</a>
+                                                    <a href="#" class="btn-green text-decoration-none btn"><i class="bi bi-play-btn me-2"></i></i>Play Video</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <div class="card overflow-hidden pb-0">
+                            <div class="row mb-3">
+                                <div class="col-6">
+                                    <p class="text-gray fw-normal fs-5 p-2 px-3 mb-0">Wishlist</p>
+                                </div>
+                                <div class="col-6 text-end">
+                                    <p class="fw-lighter text-primary mb-0 p-2 px-3 fs-5 "><i class="bi bi-bookmark-fill"></i></p>
+                                </div>
+                            </div>
+                            <div class="wishlist-body px-3">
+                                <div class="wishlist-grid mb-4 pb-2 border-bottom">
+                                    <div>
+                                        <div class="wishlist-icon p-2 border rounded-4">
+                                            <img class="w-100" src="images/figma.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="wishlist-contnet">
+                                        <h4 class="title-4 text-dark mb-1">
+                                            Motion Design with figma: <br>
+                                            Animations, Motion Graphics. UX/UI
+                                        </h4>
+                                        <p class="fw-lighter text-gray mb-1">Andrei Neagoie, Daniel Schifano</p>
+                                        <div>
+                                            <p class="text-reviews d-flex gap-1 align-items-center mb-1"><span>4.4</span> <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i> <span class="d-inline-block text-gray">(3,936)</span></p>
+                                        </div>
+                                        <h4 class="title-4 text-dark mb-1">
+                                            USD 79.99
+                                            <span class="old-price"><del>USD 399.99</del></span>
+                                        </h4>
+                                    </div>
+                                </div>
+                                <div class="wishlist-grid mb-4 pb-2 border-bottom">
+                                    <div>
+                                        <div class="wishlist-icon p-2 border rounded-4">
+                                            <img class="w-100" src="images/xd.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="wishlist-contnet">
+                                        <h4 class="title-4 text-dark mb-1">
+                                            User Experience Design Essential: <br>
+                                            Adobe XD UI UX Design
+                                        </h4>
+                                        <p class="fw-lighter text-gray mb-1">Daniel Waalter Scott</p>
+                                        <div>
+                                            <p class="text-reviews d-flex gap-1 align-items-center mb-1"><span>4.5</span> <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i> <span class="d-inline-block text-gray">(46,074)</span></p>
+                                        </div>
+                                        <h4 class="title-4 text-dark mb-1">
+                                            USD 99.99
+                                            <span class="old-price"><del>USD 399.99</del></span>
+                                        </h4>
+                                    </div>
+                                </div>
+                                <div class="wishlist-grid mb-4 pb-2 border-bottom">
+                                    <div>
+                                        <div class="wishlist-icon p-2 border rounded-4">
+                                            <img class="w-100" src="images/figma.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="wishlist-contnet">
+                                        <h4 class="title-4 text-dark mb-1">
+                                            Motion Design with figma: <br>
+                                            Animations, Motion Graphics. UX/UI
+                                        </h4>
+                                        <p class="fw-lighter text-gray mb-1">Andrei Neagoie, Daniel Schifano</p>
+                                        <div>
+                                            <p class="text-reviews d-flex gap-1 align-items-center mb-1">4.4 <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i> <span class="d-inline-block text-gray">(3,936)</span></p>
+                                        </div>
+                                        <h4 class="title-4 text-dark mb-1">
+                                            USD 79.99
+                                            <span class="old-price"><del>USD 399.99</del></span>
+                                        </h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                   <div class="owl-carousel owl-theme mb-3">
+                        <div class="item px-2">
+                            <div class="card p-3">
+                                <div class="card-img">
+                                    <img src="images/person-1.png" alt="">
+                                </div>
+                                <div class="card-body p-0 pt-2">
+                                    <h4 class="title-4 text-dark mb-1">Ahab Rahman</h4>
+                                    <h4 class="title-4 mb-1 h4 text-success">10 Slots next 24 hours</h4>
+                                    <span class="d-inline-block px-2 py-1 bg-warning fw-semibold">Super Tutor</span>
+                                    <div>
+                                        <p class="text-reviews d-flex gap-1 align-items-center mb-1">4.4 <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i> <span class="d-inline-block text-gray">(46,074)</span></p>
+                                    </div>
+                                    <div>
+                                        <div class="d-flex flex-row gap-1 align-items-center mb-1">
+                                            <div>
+                                                <img src="images/flag.png" alt="">
+                                            </div>
+                                            <span class="d-block text-gray fs-6">USA, Accent</span>
+                                        </div>
+                                        <div class="d-flex flex-row gap-1 align-items-center mb-1">
+                                            <div>
+                                                <img src="images/like.png" alt="">
+                                            </div>
+                                            <span class="d-block text-gray fs-6">26,583 reviews</span>
+                                        </div>
+                                        <div class="d-flex flex-row gap-1 align-items-center mb-1">
+                                            <div>
+                                                <img src="images/translate.png" alt="">
+                                            </div>
+                                            <span class="d-block text-gray fs-6">Speaks: English, Spanish</span>
+                                        </div>
+                                        <div class="d-flex flex-row gap-1 align-items-center mb-1">
+                                            <div>
+                                                <img src="images/students.png" alt="">
+                                            </div>
+                                            <span class="d-block text-gray fs-6">102,535 Students</span>
+                                        </div>
+                                        <div class="d-flex align-items-center justify-content-between gap-2 my-3">
+                                            <div class="tag-list text-primary p-2">Javascript</div>
+                                            <div class="tag-list text-primary p-2">Digital Marketing</div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-10">
+                                                <a href="#" class="btn btn-outline-secondary d-block rounded-pill"> See Profile </a>
+                                            </div>
+                                            <div class="col-2 p-0">
+                                                <a href="#" class="bookmark-btn btn btn-outline-secondary d-flex p-0 align-items-center justify-content-center rounded-circle"><i class="bi bi-bookmark-fill"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item px-2">
+                            <div class="card p-3">
+                                <div class="card-img">
+                                    <img src="images/person-2.png" alt="">
+                                </div>
+                                <div class="card-body p-0 pt-2">
+                                    <h4 class="title-4 text-dark mb-1">Damir J.</h4>
+                                    <h4 class="title-4 mb-1 h4 text-success">4 Slots next 24 hours</h4>
+                                    <span class="d-inline-block px-2 py-1 bg-warning fw-semibold">Beginner</span>
+                                    <div>
+                                        <p class="text-reviews d-flex gap-1 align-items-center mb-1">4.0 <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i> <span class="d-inline-block text-gray">(30,074)</span></p>
+                                    </div>
+                                    <div>
+                                        <div class="d-flex flex-row gap-1 align-items-center mb-1">
+                                            <div>
+                                                <img src="images/flag.png" alt="">
+                                            </div>
+                                            <span class="d-block text-gray fs-6">Russian, Accent</span>
+                                        </div>
+                                        <div class="d-flex flex-row gap-1 align-items-center mb-1">
+                                            <div>
+                                                <img src="images/like.png" alt="">
+                                            </div>
+                                            <span class="d-block text-gray fs-6">15,658 reviews</span>
+                                        </div>
+                                        <div class="d-flex flex-row gap-1 align-items-center mb-1">
+                                            <div>
+                                                <img src="images/translate.png" alt="">
+                                            </div>
+                                            <span class="d-block text-gray fs-6">Speaks: English, Russian</span>
+                                        </div>
+                                        <div class="d-flex flex-row gap-1 align-items-center mb-1">
+                                            <div>
+                                                <img src="images/students.png" alt="">
+                                            </div>
+                                            <span class="d-block text-gray fs-6">32,535 Students</span>
+                                        </div>
+                                        <div class="d-flex align-items-center justify-content-between gap-2 my-3">
+                                            <div class="tag-list text-primary p-2">IT & Software </div>
+                                            <div class="tag-list text-primary p-2">Microsoft Excel</div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-10">
+                                                <a href="#" class="btn btn-outline-secondary d-block rounded-pill"> See Profile </a>
+                                            </div>
+                                            <div class="col-2 p-0">
+                                                <a href="#" class="bookmark-btn btn btn-outline-secondary d-flex p-0 align-items-center justify-content-center rounded-circle"><i class="bi bi-bookmark-fill"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="card p-3 p-lg-4 mb-3">
+                            <p class="text-gray-50 fw-normal fs-5 mb-2">Upcoming Updates</p>
+                            <ul class="list-unstyled w-100">
+                                <li class="d-flex align-items-center justify-content-between w-100">
+                                    <p class="text-gray fw-normal fs-5 mb-0 d-flex align-items-center justify-content-center"><i class="bi bi-dot fs-1"></i> Mental Health Awareness Symposium</p>
+                                    <p class="text-gray fw-normal fs-5 mb-0 d-flex align-items-center justify-content-center">9.30am</p>
+                                </li>
+                                <li class="d-flex align-items-center justify-content-between w-100">
+                                    <p class="text-gray fw-normal fs-5 mb-0 d-flex align-items-center justify-content-center"><i class="bi bi-dot fs-1"></i> Online Seminar offers <br>
+                                        the most user-friendly platform.</p>
+                                    <p class="text-gray fw-normal fs-5 mb-0 d-flex align-items-center justify-content-center">9.30am</p>
+                                </li>
+                                <li class="d-flex align-items-center justify-content-between w-100">
+                                    <p class="text-gray fw-normal fs-5 mb-0 d-flex align-items-center justify-content-center"><i class="bi bi-dot fs-1"></i> Online Seminar offers <br>
+                                        the most user-friendly platform.</p>
+                                    <p class="text-gray fw-normal fs-5 mb-0 d-flex align-items-center justify-content-center">9.30am</p>
+                                </li>
+                                <li class="d-flex align-items-center justify-content-between w-100">
+                                    <p class="text-gray fw-normal fs-5 mb-0 d-flex align-items-center justify-content-center"><i class="bi bi-dot fs-1"></i> Online Seminar offers <br>
+                                        the most user-friendly platform.</p>
+                                    <p class="text-gray fw-normal fs-5 mb-0 d-flex align-items-center justify-content-center">9.30am</p>
+                                </li>
+                            </ul>
+                            <div class="text-center">
+                                <a href="#" class="py-2 px-3 d-inline-block bg-gray-50 rounded-3 text-gray text-decoration-none fw-semibold">Click for more</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="mb-3">
+                        <h1 class="text-center fs-1">Ivanov Ivan</h1>
+                        <div class="my-3">
+                            <div class="tag-list text-primary p-2 mx-auto" style="max-width: 200px;">Software Engineer </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <div class="card border-0 bg-gray-50 p-4 d-flex flex-row justify-content-between">
+                                    <div>
+                                        <p class="fw-lighter mb-1">Lesson <br> Completed</p>
+                                        <h2 class="fw-normal mb-0">10</h2>
+                                    </div>
+                                    <div>
+                                        <img width="80" src="images/leason.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <div class="card border-0 bg-gray-50 p-4 d-flex flex-row justify-content-between">
+                                    <div>
+                                        <p class="fw-lighter mb-1">Forum <br> Discussion</p>
+                                        <h2 class="fw-normal mb-0">26</h2>
+                                    </div>
+                                    <div>
+                                        <img width="80" src="images/chat.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-4 ">
+                        <p class="text-primary fw-normal fs-5 mb-2">Offline Purchase Courses</p>
+                        <div class="card pb-2 border-0 scroll-72">
+                            <div class="bg-warning-50 p-1 p-md-3 rounded-5">
+                                <p class="fw-normal fst-italic mb-0">Upcoming Lecture to Attend</p>
+                                <hr class="border-primary mt-2">
+                                <div class="row mb-3 border-bottom pb-2 m-0">
+                                    <div class="col-3 col-md-2">
+                                        <div class="p-2 border rounded-3 bg-white">
+                                            <img class="w-100" src="images/es-dubai-logo.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="col-9 col-md-10">
+                                        <p class="d-block text-primary">
+                                            Lecture Topic
+                                        </p>
+                                        <h2>Study English and <br>
+                                            enjoy in Dubai with ES!</h2>
+                                    </div>
+                                </div>
+                                <div class="row mb-3 border-bottom pb-2 m-0">
+                                    <div class="col-md-6 mb-3">
+                                        <div class="card border-0 bg-transparent d-flex flex-row">
+                                            <div class="icon-wrapper p-3 d-flex align-items-center justify-content-center rounded-circle bg-white">
+                                                <img class="w-100" src="images/timer.png" alt="">
+                                            </div>
+                                            <div>
+                                                <p class="text-gray-50 fs-5 mb-1 fw-lighter">Course Duration:</p>
+                                                <h3 class="mb-0">3 hours / Per week</h3>
+                                                <h3 class="mb-0">12h Weeks <span class="d-inline">(Semi-Intensive)</span></h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <div class="card border-0 bg-transparent d-flex flex-row">
+                                            <div class="icon-wrapper p-3 d-flex align-items-center justify-content-center rounded-circle bg-white">
+                                                <img class="w-100" src="images/clock.png" alt="">
+                                            </div>
+                                            <div>
+                                                <p class="text-gray-50 fs-5 mb-1 fw-lighter">Learning Time:</p>
+                                                <h3 class="mb-0">09:00 - 12:30 </h3>
+                                                <h3 class="mb-0"></h3> <span class="d-inline"></span></h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <div class="card border-0 bg-transparent d-flex flex-row">
+                                            <div class="icon-wrapper p-3 d-flex align-items-center justify-content-center rounded-circle bg-white">
+                                                <img class="w-100" src="images/calender-1.png" alt="">
+                                            </div>
+                                            <div>
+                                                <p class="text-gray-50 fs-5 mb-1 fw-lighter">Course Duration:</p>
+                                                <h3 class="mb-0">Every week on Monday</h3>
+                                                <h3 class="mb-0">23 Oct to 23 Dec 2024</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <div class="card border-0 bg-transparent d-flex flex-row">
+                                            <div class="icon-wrapper p-3 d-flex align-items-center justify-content-center rounded-circle bg-white">
+                                                <img class="w-100" src="images/price-info.png" alt="">
+                                            </div>
+                                            <div>
+                                                <p class="text-gray-50 fs-5 mb-1 fw-lighter">Pricing Details:</p>
+                                                <h3 class="mb-0">3 hours / Per week</h3>
+                                                <h3 class="mb-0">Pricing Details</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mb-3 border-bottom pb-2 m-0">
+                                    <div class="col-md-7 mb-3">
+                                        <div class="card border-0 bg-transparent d-flex flex-row">
+                                            <div class="icon-wrapper p-3 d-flex align-items-center justify-content-center rounded-circle bg-white">
+                                                <img class="w-100" src="images/location.png" alt="">
+                                            </div>
+                                            <div>
+                                                <p class="text-gray-50 fs-5 mb-1 fw-lighter">Lecture Location</p>
+                                                <h3 class="mb-2">BB1 Mazaya Business Avenue
+                                                    15th, 34th, 36th Floors, JLT</h3>
+
+                                                <a href="#" class="btn btn-orange">Know More</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-5 mb-3">
+                                        <div class="card border-0 bg-transparent d-flex flex-row bg-white align-items-center">
+                                            <div class="icon-wrapper h-50 w-50 p-3 d-flex align-items-center justify-content-center rounded-circle ">
+                                                <img class="w-75" src="images/google-maps.png" alt="">
+                                            </div>
+                                            <div>
+                                                <p class="text-gray-50 fs-5 mb-1 fw-lighter">Click here <br>
+                                                    for Lecture <br>
+                                                    Location</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-4 ">
+                        <p class="text-primary fw-semibold fs-5 mb-3">Purchased Video and Order</p>
+                        <div class="wishlist-body px-3">
+                            <div class="mb-4 pb-3 border-bottom">
+                                <div class="wishlist-grid ">
+                                    <div>
+                                        <div class="wishlist-icon p-2 border rounded-4">
+                                            <img class="w-100" src="images/Midjourney_Emblem_—_Discord.svg 1.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="wishlist-contnet">
+                                        <h4 class="title-4 text-dark mb-1">
+                                            Midjourney Mastery: <br>
+                                            Create Visually Stunning AI Art
+                                        </h4>
+                                        <p class="fw-lighter text-gray mb-1">Samson Vowles</p>
+                                        <div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex flex-column flex-md-row align-items-center gap-2">
+                                    <h4 class="text-primary mb-0 me-3">100 USD</h4>
+                                    <div class="col-md-4 d-flex flex-column justify-content-end mt-auto">
+                                        <div class="progress w-100" role="progressbar" aria-label="Danger example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                                            <div class="progress-bar bg-primary" style="width: 100%"></div>
+                                        </div>
+                                        <span class="fw-lighter text-gray">100% Downloaded Complete</span>
+                                    </div>
+                                    <div>
+                                        <p class="fw-lighter text-gray mb-0"><span>Video Size:0.93MB</span></p>
+                                        <div  class="d-flex gap-2 flex-wrap">
+                                            <a href="#" class="btn-purple text-decoration-none btn"><i class="bi bi-arrow-down-circle me-2"></i>Download</a>
+                                            <a href="#" class="btn-green text-decoration-none btn"><i class="bi bi-play-btn me-2"></i>Play Video</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mb-4 pb-3 border-bottom">
+                                <div class="wishlist-grid ">
+                                    <div>
+                                        <div class="wishlist-icon p-2 border rounded-4">
+                                            <img class="w-100" src="images/ai.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="wishlist-contnet">
+                                        <h4 class="title-4 text-dark mb-1">
+                                            AI Data Science: Data Scientist <br>
+                                            and Machine Learning engineer!  
+                                        </h4>
+                                        <p class="fw-lighter text-gray mb-1">Andrei Neagoie, Daniel Schifano</p>
+                                        <div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex flex-column flex-md-row align-items-center gap-2 w-100">
+                                    <h4 class="text-primary mb-0 me-3">100 USD</h4>
+                                    <div class="col-md-4 d-flex flex-column justify-content-end mt-2">
+                                        <div class="progress w-100" role="progressbar" aria-label="Danger example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                                            <div class="progress-bar bg-primary" style="width: 30%"></div>
+                                        </div>
+                                        <span class="fw-lighter text-gray">30% Complete</span>
+                                    </div>
+                                    <div>
+                                        <div class="d-flex align-items-center justify-content-center">
+                                            <a href="#" class="btn bg-warning text-decoration-none btn"><i class="bi bi-play-btn me-2"></i>30% Complete</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mb-4 pb-3 border-bottom">
+                                <div class="wishlist-grid ">
+                                    <div>
+                                        <div class="wishlist-icon p-2 border rounded-4">
+                                            <img class="w-100" src="images/Midjourney_Emblem_—_Discord.svg 1.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="wishlist-contnet">
+                                        <h4 class="title-4 text-dark mb-1">
+                                            Midjourney Mastery: <br>
+                                            Create Visually Stunning AI Art
+                                        </h4>
+                                        <p class="fw-lighter text-gray mb-1">Samson Vowles</p>
+                                        <div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex flex-column flex-md-row align-items-center gap-2">
+                                    <h4 class="text-primary mb-0 me-3">100 USD</h4>
+                                    <div class="col-md-4 d-flex flex-column justify-content-end mt-auto">
+                                        <div class="progress w-100" role="progressbar" aria-label="Danger example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                                            <div class="progress-bar bg-primary" style="width: 100%"></div>
+                                        </div>
+                                        <span class="fw-lighter text-gray">100% Downloaded Complete</span>
+                                    </div>
+                                    <div>
+                                        <p class="fw-lighter text-gray mb-0"><span>Video Size:0.93MB</span></p>
+                                        <div  class="d-flex gap-2 flex-wrap">
+                                            <a href="#" class="btn-purple text-decoration-none btn"><i class="bi bi-arrow-down-circle me-2"></i>Download</a>
+                                            <a href="#" class="btn-green text-decoration-none btn"><i class="bi bi-play-btn me-2"></i>Play Video</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <div class="calendar-container">
+                            <div class="calendar-header mb-3">
+                                <button class="btn btn-link fs-2"><i class="bi bi-chevron-left"></i></button>
+                                <h1 class="text-primary">October</h1>
+                                <button class="btn btn-link fs-2"><i class="bi bi-chevron-right"></i></button>
+                            </div>
+                            <div class="row text-center">
+                                <div class="col day-name text-primary">SU</div>
+                                <div class="col day-name text-primary">MO</div>
+                                <div class="col day-name text-primary">TU</div>
+                                <div class="col day-name text-primary">WE</div>
+                                <div class="col day-name text-primary">TH</div>
+                                <div class="col day-name text-primary">FR</div>
+                                <div class="col day-name text-primary">SA</div>
+                            </div>
+                            <div class="row text-center">
+                                <div class="col"><span class="day-number"></span></div>
+                                <div class="col"><span class="day-number">1</span></div>
+                                <div class="col"><span class="day-number">2</span></div>
+                                <div class="col"><span class="day-number highlighted">3</span></div>
+                                <div class="col"><span class="day-number">4</span></div>
+                                <div class="col"><span class="day-number">5</span></div>
+                                <div class="col"><span class="day-number">6</span></div>
+                            </div>
+                            <div class="row text-center">
+                                <div class="col"><span class="day-number weekend">7</span></div>
+                                <div class="col"><span class="day-number weekend">8</span></div>
+                                <div class="col"><span class="day-number">9</span></div>
+                                <div class="col"><span class="day-number">10</span></div>
+                                <div class="col"><span class="day-number">11</span></div>
+                                <div class="col"><span class="day-number weekend">12</span></div>
+                                <div class="col"><span class="day-number highlighted">13</span></div>
+                            </div>
+                            <div class="row text-center">
+                                <div class="col"><span class="day-number weekend">14</span></div>
+                                <div class="col"><span class="day-number">15</span></div>
+                                <div class="col"><span class="day-number">16</span></div>
+                                <div class="col"><span class="day-number">17</span></div>
+                                <div class="col"><span class="day-number">18</span></div>
+                                <div class="col"><span class="day-number">19</span></div>
+                                <div class="col"><span class="day-number weekend">20</span></div>
+                            </div>
+                            <div class="row text-center">
+                                <div class="col"><span class="day-number highlighted">21</span></div>
+                                <div class="col"><span class="day-number weekend">22</span></div>
+                                <div class="col"><span class="day-number purple">23</span></div>
+                                <div class="col"><span class="day-number purple">24</span></div>
+                                <div class="col"><span class="day-number purple">25</span></div>
+                                <div class="col"><span class="day-number highlighted">26</span></div>
+                                <div class="col"><span class="day-number weekend">27</span></div>
+                            </div>
+                            <div class="row text-center">
+                                <div class="col"><span class="day-number blue">28</span></div>
+                                <div class="col"><span class="day-number blue">29</span></div>
+                                <div class="col"><span class="day-number blue">30</span></div>
+                                <div class="col"><span class="day-number blue">31</span></div>
+                                <div class="col"></div><div class="col"></div><div class="col"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="row m-0">
+                            <div class="col-md-4 col-lg-12 col-xl-4">
+                                <div class="border-end d-flex gap-2 flex-column">
+                                    <div class="d-flex align-items-center gap-2 my-2">
+                                        <div class="bar-circle bg-warning"></div>
+                                        <span class="notifiation-title text-gray px-2 p-1 fw-semibold fs-5">Video Conferencey</span>
+                                    </div>
+                                    <div class="d-flex align-items-center gap-2 my-2">
+                                        <div class="bar-circle bg-danger"></div>
+                                        <span class="notifiation-title text-gray px-2 p-1 fw-semibold fs-5">Lecture day</span>
+                                    </div>
+                                    <div class="d-flex align-items-center gap-2 my-2">
+                                        <div class="bar-circle bg-purple"></div>
+                                        <span class="notifiation-title text-gray px-2 p-1 fw-semibold fs-5">Small Test day</span>
+                                    </div>
+                                    <div class="d-flex align-items-center gap-2 my-2">
+                                        <div class="bar-circle bg-info"></div>
+                                        <span class="notifiation-title text-gray px-2 p-1 fw-semibold fs-5">Online Streaming</span>
+                                    </div>
+                                    <div class="d-flex align-items-center gap-2 my-2">
+                                        <div class="bar-circle bg-success"></div>
+                                        <span class="notifiation-title text-gray px-2 p-1 fw-semibold fs-5">Upcoming Event</span>
+                                    </div>
+                                    <div class="d-flex align-items-center gap-2 my-2">
+                                        <div class="bar-circle bg-dark"></div>
+                                        <span class="notifiation-title text-gray px-2 p-1 fw-semibold fs-5">More information</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-8 col-lg-12 col-xl-8">
+                                <ul class="dropdown-menu footer d-flex flex-column bg-transparent position-relative border-0 p-4">
+                                    <li class="mb-3">
+                                        <p class="text-center fw-semibold text-gray p-2 bg-white mb-0">03-10-2024</p>
+                                        <div class="d-flex align-items-center gap-2 my-2">
+                                            <div class="bar-circle bg-warning"></div>
+                                            <span class="notifiation-title bg-warning text-gray px-2 p-1 fw-semibold">Video Conference</span>
+                                        </div>
+                                        <div class="notifiaction-time">
+                                            <p class="mb-0 fw-semibold text-gray">At 2.00pm to 3.00pm</p>
+                                        </div>
+                                        <span class="fw-lighter">By Damir J.</span>
+                                        <a href="#" class="drop-link text-primary fst-italic mt-2 px-3 py-1 rounded-pill text-decoration-none d-block border text-gray fw-light">Click here for the Video Link</a>
+                                    </li>
+                                    <li class="mb-3">
+                                        <p class="text-center fw-semibold text-gray p-2 bg-white mb-0">08-10-2024</p>
+                                        <div class="d-flex align-items-center gap-2 my-2">
+                                            <div class="bar-circle bg-danger"></div>
+                                            <span class="notifiation-title text-danger px-2 p-1 fw-semibold">Lecture Day</span>
+                                        </div>
+                                        <div class="notifiaction-time">
+                                            <p class="mb-0 fw-semibold text-gray">At 3.00pm to 4.00pm</p>
+                                        </div>
+                                        <span class="fw-lighter">By Damir J.</span>
+                                        <a href="#" class="drop-link text-primary fst-italic mt-2 px-3 py-1 rounded-pill text-decoration-none d-block border text-gray fw-light">Click here for the Video Link</a>
+                                    </li>
+                                    
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="bg-body-50 text-center p-4">
+                        <button class="btn btn btn-lg btn-primary"><i class="bi bi-floppy me-2"></i> Save Change</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script>
+         $(document).ready(function() {
+            $('.owl-carousel').owlCarousel({
+                items: 2,
+                margin: 10,
+                nav:false,
+                dots: false,
+                loop: true,
+                responsive: {
+                    0: {
+                        items: 1,
+                    },
+                    575: {
+                        items: 2,
+                    },
+                    991:{
+                        items: 1,
+                    },
+                    1023:{
+                        items: 2,
+                    },
+                },
+                smartSpeed: 600, 
+                autoplayHoverPause: true,
+                autoplayTimeout: 5000,
+            });
+         });
+    </script>
+</body>
+</html>
